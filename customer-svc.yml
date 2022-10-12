@@ -9,7 +9,7 @@ token:
   secret: user-token_native_customer-svc
 
 gateway:
-  ip: 10.14.5.167
+  ip: 172.18.0.5
 
 order_svc:
   url: http://ORDER-SVC/order-svc/%s/orders 
