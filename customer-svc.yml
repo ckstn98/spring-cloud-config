@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}AYB491xECo/Gy82E/G6r8MR94eIb/dZRAiBY1DqzYHzIIU0lyZvB+tQUFQ3B2D8QoOdY82/Y9WbAYXtxDUM3TrFJuHnYQ2ZH+rmf7sqV9pZfCVD2+1eQ3PHgyeeBx0Heq8ffBi/0AOI2Uf+Ekoj85KLrdyb/Wk/Yp7UshdVYCg8rKLFZRh/Ivev3qJ8SkaFVgnvwLY5ZlsueVsrQoD+5Qn1M7aq6xcbnSRdbUYcr1Baw7UbWUghGwGS97TDWjwUMjgGwNaAlSIeazHn9s+0df/BnEoHuMUlM63Pfv5hedNWF+/Ts6mBtzy6vyigLW/E0EaFYSuOgaMAYj2sSZ1Aw9Zmrve4oGSe5IQGyxNfzciipl1Ts8t/Ka5rRkVX1ZbLz2b8Qsx2ao/l6VQJ1a7CThRoNHweZz22AxULcv2Osxm1D2fYu4RrcWJgnlt088u7EBhEG3BXTz4qfyCVc0eIc9EDgovRDiei6u1Evj1W/4xzJPjgcGKLzSiSTrx295CUTo2Z0e+zAnBISB7B7gZcCXRfHaW+gZQoLBso/iUX77KQT+g=='
+token:
+  expiration_time: 864000000
+  secret: user-token_native_customer-svc
+
+gateway:
+  ip: 10.14.5.167
+
+order_svc:
+  url: http://ORDER-SVC/order-svc/%s/orders 
+  exception:
+    orders_is_empty: There is no item.
